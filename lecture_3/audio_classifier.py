@@ -4,7 +4,7 @@
 # wget https://github.com/karoldvl/ESC-50/archive/master.zip
 
 
-# !pip install torch torchaudio matplotlib pandas
+# !pip install torch torchaudio matplotlib pandas hydra_colorlog
 
 
 import torch, torchaudio
@@ -20,7 +20,7 @@ from pathlib import Path
 
 import hydra
 from hydra.utils import get_original_cwd
-from omegaconf import DictConfig
+from omegaconf import DictConfig, OmegaConf
 
 import logging
 
@@ -122,6 +122,7 @@ class AudioNet(pl.LightningModule):
 
 @hydra.main(config_path="configs", config_name="default")
 def train(config: DictConfig):
+    logger.info(OmegaConf.to_yaml(config))
     path = Path(get_original_cwd()) / Path(config.data.path)
     train_data = ESC50Dataset(path=path, folds=config.data.train_folds)
     val_data = ESC50Dataset(path=path, folds=config.data.val_folds)
@@ -134,7 +135,7 @@ def train(config: DictConfig):
         val_data,
         batch_size=config.data.batch_size,
     )
-    test_loader = torch.utils.data.DataLoader(
+    _ = torch.utils.data.DataLoader(
         test_data,
         batch_size=config.data.batch_size,
     )
