@@ -4,7 +4,7 @@
 # wget https://github.com/karoldvl/ESC-50/archive/master.zip
 
 
-# !pip install torch torchaudio hydra-core pandas hydra_colorlog
+# !pip install torch torchaudio pandas hydra-core hydra_colorlog dvc
 
 
 import torch, torchaudio
@@ -14,7 +14,6 @@ from torch.nn import functional as F
 import pytorch_lightning as pl
 from torchmetrics import functional
 
-import matplotlib.pyplot as plt
 import pandas as pd
 from pathlib import Path
 
