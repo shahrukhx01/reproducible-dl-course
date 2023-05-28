@@ -4,7 +4,7 @@
 # wget https://github.com/karoldvl/ESC-50/archive/master.zip
 
 
-# !pip install torch torchaudio pandas hydra-core hydra_colorlog dvc
+# !pip install torch torchaudio pandas hydra-core hydra_colorlog dvc boto3
 
 
 import torch, torchaudio

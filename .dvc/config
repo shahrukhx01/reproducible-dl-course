@@ -1,2 +1,10 @@
+[core]
+    remote = minio1
 ['remote "localremote"']
     url = /home/shahrukh/localremote/
+['remote "minio"']
+    url = s3://esc50
+    endpointurl = http://localhost:9000/
+['remote "minio1"']
+    url = s3://test-bucket
+    endpointurl = http://localhost:9000/
