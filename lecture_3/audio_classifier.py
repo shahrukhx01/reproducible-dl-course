@@ -22,6 +22,10 @@ import hydra
 from hydra.utils import get_original_cwd
 from omegaconf import DictConfig
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 class ESC50Dataset(torch.utils.data.Dataset):
     # Simple class to load the desired folders inside ESC-50
