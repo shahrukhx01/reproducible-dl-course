@@ -1,5 +1,5 @@
 [core]
-    remote = minio1
+    remote = test-minio
 ['remote "localremote"']
     url = /home/shahrukh/localremote/
 ['remote "minio"']
@@ -7,4 +7,7 @@
     endpointurl = http://localhost:9000/
 ['remote "minio1"']
     url = s3://test-bucket
+    endpointurl = http://localhost:9000/
+['remote "test-minio"']
+    url = s3://test-minio
     endpointurl = http://localhost:9000/
