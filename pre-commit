@@ -2,12 +2,12 @@
 
 echo "running a pre commit test"
 
-# black --diff --check lecture_7/audio_classifier.py lecture_7/test_audio_classifier.py
-# # $? stores exit value of the last command
-# if [ $? -ne 0 ]; then
-#  echo "Code is not formatted correctly."
-#  exit 1
-# fi 
+black --diff --check lecture_7/audio_classifier.py lecture_7/test_audio_classifier.py
+# $? stores exit value of the last command
+if [ $? -ne 0 ]; then
+ echo "Code is not formatted correctly."
+ exit 1
+fi 
 
 # nosetests
 
