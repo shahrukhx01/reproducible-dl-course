@@ -165,3 +165,4 @@ lightning_logs/
 outputs/*
 data/data/*
 data/minio
+wandb/*
