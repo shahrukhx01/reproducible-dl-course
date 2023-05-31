@@ -1,9 +1,17 @@
 hydra-core==1.3.2
+librosa==0.10.0.post2
+matplotlib==3.7.1
+numpy==1.24.3
 omegaconf==2.3.0
 pandas==1.5.3
+pytest==7.3.1
 pytorch_lightning==1.9.0
+seaborn==0.12.2
 torch==2.0.1
 torchaudio==2.0.2
 torchmetrics==0.7.0
+tqdm==4.65.0
 psutil==5.8.0
 hydra-colorlog==1.2.0
+pre-commit==3.3.2
+wandb==0.15.3
