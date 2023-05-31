@@ -1,8 +1,0 @@
-wandb_version: 1
-
-base_filters:
-  value: 58
-lr:
-  value: 0.08317313028646789
-sample_rate:
-  value: 4000
