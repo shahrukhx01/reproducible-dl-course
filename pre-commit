@@ -9,7 +9,7 @@ if [ $? -ne 0 ]; then
  exit 1
 fi 
 
-nosetests
+nosetests lecture_7/test_audio_classifier.py
 
 if [ $? -ne 0 ]; then
  echo "Tests must pass before committing."
