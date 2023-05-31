@@ -8,10 +8,10 @@ if [ $? -ne 0 ]; then
  echo "Code is not formatted correctly."
  exit 1
 fi 
-##
-# nosetests
 
-# if [ $? -ne 0 ]; then
-#  echo "Tests must pass before committing."
-#  exit 1
-# fi 
+nosetests
+
+if [ $? -ne 0 ]; then
+ echo "Tests must pass before committing."
+ exit 1
+fi 
