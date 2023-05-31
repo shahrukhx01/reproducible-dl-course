@@ -29,7 +29,7 @@ import wandb
 
 
 class ESC50Dataset(torch.utils.data.Dataset):
-    # Simple class to load the desired folders inside the ESC-50
+    # Simple class to load the desired folders inside the folder ESC-50
 
     def __init__(
         self,
